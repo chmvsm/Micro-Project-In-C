@@ -1,0 +1,33 @@
+INPUT :
+#include <stdio.h>
+
+int main() {
+    int arr[25], num, i, count = 0;
+
+    printf("Enter 25 numbers:\n");
+    for (i = 0; i < 25; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter the number to search: ");
+    scanf("%d", &num);
+
+    for (i = 0; i < 25; i++) {
+        if (arr[i] == num) {
+            count++;
+        }
+    }
+
+    if (count > 0) {
+        printf("The number %d is present %d times in the array.\n", num, count);
+    } else {
+        printf("The number %d is not present in the array.\n", num);
+    }
+
+    return 0;
+}
+OUTPUT :
+Enter 25 numbers:
+1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10 1 2 3 4 5
+Enter the number to search: 11
+ The number 3 is present 3 times in the array
